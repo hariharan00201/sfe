@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name ="SFE" content="Solutionsforeverything">
+    <title>Py-sleep</title>
+    <meta content="Home page of solutions for everything" name="description">
+    <meta name="keywords" content="crypto exchange, crypto wallet ,cryptocurrency ,crypto ,cryptopunks ,cryptokitties ,crypto etf ,crypto mining">
+    <script data-ad-client="ca-pub-6732442063943834" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <link rel="icon" href="../../assets/static/logo1.ico" type="image/x-icon" size="16x16" >
+    <link href="../logo.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+
+    <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Template Main CSS File -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B41W65ZRYF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-B41W65ZRYF');
+    </script>
+
+
+    <style>
+
+
+        body {
+            background-color:#ECEBEB;
+            font-family: 'Open Sans', sans-serif;
+        }
+        p {
+            color:#A7A7A7;
+        }
+        a {
+            color:#85AD90;
+        }
+
+
+        .img-logo img {
+            position: relative;
+            width: 100px;
+            height: 75px;
+        }
+        .goal-summary .backers h3, .goal-summary .funded h3, .goal-summary .time-left h3 {
+            background-color:#fff;
+            padding:5px;
+            margin:0px 0px 5px 0px;
+            display:table;
+            border-radius:4px;
+            color:#85AD90;
+        }
+        .goal-summary .backers span, .goal-summary .funded span, .goal-summary .time-left span {
+            color:#fff;
+        }
+        .goal-summary .reminder a {
+            background-color:#fff;
+            padding:8px;
+            margin:0px 0px 10px 0px;
+            display:table;
+            border-radius:4px;
+            text-decoration:none;
+        }
+        .goal-summary .reminder a:hover, .goal-summary .reminder a:focus {
+            background-color:#85AD90;
+            color:#fff;
+        }
+        @media (max-width: 767px) {
+            .goal-summary {
+                text-align: center;
+                padding: 0px 40px;
+            }
+        }
+        @media (max-width: 480px) {
+            .goal-summary {
+                padding: 0px;
+            }
+        }
+
+        /*-Section Blocks-*/
+        .section-block {
+            background-color: #F7F7F7;
+            border-radius:4px;
+            padding: 40px;
+            margin-bottom:30px;
+        }
+        .section-block.summary {
+            background-color: #37517e;
+        }
+        .section-block.summary h1 {
+            color: #fff;
+            display:block;
+            text-align:center;
+        }
+        .section-block.transparent {
+            background-color:transparent
+        }
+        .section-block.signup {
+            background-color:#37517e;
+        }
+        .section-block h1 {
+            margin-top:0;
+        }
+        .section-title {
+            color:#37517e ;
+            border-radius: 4px;
+            display: table;
+            padding: 10px 0px;
+            font-size: 25px;
+            font-weight:700;
+        }
+
+        /*-Main Content-*/
+        .main-content {
+            padding:40px 0px;
+        }
+
+        /*-Profile Summary-*/
+        .profile-contents {
+            margin: 0 auto;
+            text-align: center;
+        }
+        .profile-contents h2 {
+            color:#FFF;
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight:300;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .profile-image {
+            border-radius:50%;
+            max-height: 180px;
+            margin-bottom:10px;
+        }
+        .profile-contents ul li {
+            padding:0;
+            margin:5px;
+        }
+        .profile-contents ul li a {
+            background-color: #85AD90;
+            color: #FFF;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            text-align: center;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+        }
+        .profile-contents ul li a i.fa {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .profile-contents ul li a:hover {
+            background-color:#779A81;
+        }
+
+        /*-Funding Meta-*/
+        .funding-meta {}
+        .funding-meta h1 {
+            background: #37517e;
+            color: #fff;
+            border-radius: 4px;
+            display: table;
+            padding: 10px;
+            font-size: 25px;
+            font-weight:700;
+        }
+
+        .type-meta i.fa {
+            color:#37517e;
+            margin-right:5px;
+        }
+        .funding-meta h2{
+            font-weight:700;
+        }
+        .funding-meta p {
+            color: #A7A7A7;
+            margin: 30px 0px 10px 0px;
+        }
+        .video-frame {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+            display:block;
+        }
+        .video-frame iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .funding-meta h2, .funding-meta span.contribution {
+            display:inline-block;
+            color: #37517e;
+        }
+        .funding-meta span.contribution, .funding-meta span.goal-progress {
+            color: #A7A7A7;
+        }
+        .funding-meta span.goal-progress {
+            text-align:right;
+            display: block;
+        }
+        .count-down {
+            display: block;
+            color: #A7A7A7;
+            text-align: right;
+            text-transform: uppercase;
+        }
+        .count-down strong {
+            padding-right:5px;
+        }
+
+
+        /*-Rewards-*/
+        .reward-block {
+            position:relative;
+            background-color: #fff;
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom:10px;
+        }
+        .reward-block:hover {
+            background-color: #DCF7E3;
+        }
+        .reward-block.last {
+            margin-bottom:0;
+        }
+        .reward-block h3 {
+            background: #37517e;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+            margin: 0px 0px 10px 0px;
+            padding: 10px;
+            display: table;
+            border-radius: 4px;
+        }
+        .reward-block h2 {
+            font-size: 20px;
+            font-weight: 300;
+            color: #37517e;
+            margin: 15px 0px;
+        }
+        .reward-block i.fa {
+            color:#37517e;
+        }
+        .reward-block span {
+            margin-bottom: 10px;
+            display: block;
+            color: #A7A7A7;
+        }
+        .reward-block.popular:after {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            content: "popular";
+            background-color: #2ED9EA;
+            color: #fff;
+            padding: 5px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /*-Sign up form-*/
+        .sign-up-form {
+            text-align: center;
+        }
+        .sign-up-form p {
+            font-weight:700;
+            color:#fff;
+        }
+        .signup-input {
+            width: 100%;
+            border: 0;
+            padding: 10px;
+            border-radius: 4px;
+            max-width: 400px;
+        }
+        @media (max-width: 767px) {
+            .signup-input {
+                width: 75%;
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            .signup-input {
+                width: 100%;
+                max-width: 100%;
+            }
+            .sign-up-form .btn.btn-signup {
+                margin:10px 0px;
+                width:100%;
+                display:block;
+            }
+        }
+
+        /*-Tabs-*/
+        .nav-tabs {
+            border:0;
+        }
+        .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+            color: #FFF;
+            background-color: #37517e;
+            border: 0;
+            border-radius: 4px;
+            font-weight:700;
+        }
+        .nav-tabs>li>a, .nav-tabs>li>a:hover {
+            border:0;
+            margin-right: 10px;
+            color:#A7A7A7;
+        }
+        .tab-content .section-title {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #E2E2E2;
+            display: block;
+        }
+
+        /*-Updates-*/
+        .update-post {
+            margin-bottom: 30px;
+            padding: 10px;
+            background-color: #FDFDFD;
+            border-radius: 4px;
+        }
+        .update-post .update-title {
+            margin: 10px 0px;
+            font-weight: 700;
+        }
+        .update-post .update-date {
+            margin: 0px 0px 15px 0px;
+            display: block;
+            color: #A7A7A7;
+            font-size: 12px;
+        }
+
+
+
+        /*-Buttons-*/
+        .btn {
+            border:0;
+        }
+        .btn.btn-launch {
+            background-color: #37517e;
+            color: #FFF;
+            font-size: 17px;
+            font-weight: 600;
+            padding: 10px 25px;
+        }
+        .btn.btn-launch:hover, .btn.btn-launch:focus,.btn.btn-reward, .btn.btn-reward:hover, .btn.btn-reward :focus {
+            background-color:#85AD90;
+            box-shadow:none;
+        }
+        .btn.btn-reward {
+            background-color: #37517e;
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 5px 15px;
+        }
+        .btn.btn-signup {
+            background-color: #37517e;
+            color: #fff;
+            height: 40px;
+            width: 43px;
+            margin-left: 10px;
+            border: 2px solid #fff;
+            text-align: center;
+        }
+        .btn.btn-contact {
+            background-color: #37517e;
+            color: #fff;
+            font-weight:700;
+        }
+        .btn.btn-contact:hover, .btn.btn-contact:focus {
+            background-color: #779A81;
+        }
+        .btn.btn-contact i.fa {
+            margin-right:10px;
+        }
+        .btn.btn-follow {
+            background-color: #81A8F1;
+            color: #fff;
+            margin-bottom:10px;
+        }
+        .btn.btn-download {
+            background-color: #85AD90;
+            color: #fff;
+        }
+
+        /*-Credits-*/
+        .credit-block {
+            padding: 20px;
+            background-color: #FFF;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .credit-block.sources a{
+            margin: 10px 0px;
+            display: block;
+        }
+        .credit-block.license a.lined{
+            text-decoration:underline;
+        }
+        .credit-block i.fa {
+            padding-right:10px;
+        }
+        .content-class
+        {
+            color: black;
+
+        }
+        .coding-class{
+
+
+        }
+        .precode{
+
+            font-family: monospace;
+            white-space: pre;
+            margin: 1em 0px;
+            background: #383b40;
+            color: white;
+        }
+
+        .keyword{
+            color: orange;
+
+        }
+
+        .inoutfunction {
+            color: #ba54ba;
+
+        }
+
+        .printingwords{
+            color: #32a832;
+
+        }
+        .numbers{
+            color: skyblue;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+        <h1 class="logo me-auto">
+            <pre><img src="../../assets/static/logo.png"> <a href="/{{email}}">SFE</a></pre>
+        </h1>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="/{{email}}">Home</a></li>
+                <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+
+                        <li class="dropdown"><a href="#"><span>Blogs</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="/blogs/{{email}}/pythonBlogs">Coding</a></li>
+                                <li><a href="/blogs/{{email}}/cryptoBlogs">Crypto</a></li>
+                                <li><a href="/blogs/{{email}}/generalBlogs">General</a></li>
+
+
+                            </ul>
+                        </li>
+
+                        <li class="dropdown"><a href="#"><span>Projects</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="/projects/{{email}}/machine">Machine-learning projects</a></li>
+                                <li><a href="/projects/{{email}}/python">python projects</a></li>
+                                <li><a href="/projects/{{email}}/java">java projects</a></li>
+                                <li><a href="/projects/{{email}}/web">Web projects</a></li>
+                                <li><a href="/projects/{{email}}/cpp">c++ projects</a></li>
+
+                            </ul>
+                        <li><a href="{{email}}/courses">Courses</a></li>
+                        <li><a href="{{email}}/websites">Websites</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto" href="/{{email}}#contact">Contact</a></li>
+				<li><a class="nav-link scrollto" href="/{{email}}#about">About</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header>
+<div class="row">
+    <div class="col col-12" style="background-color: #37517e"><br><br><br></div>
+</div>
+<br><br>
+<div class="main-content p-5">
+
+    <div class="row">
+
+        <div class="content col-md-9 col-sm-12 col-xs-12">
+            <div class="section-block">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="about">
+                        <div class="about-information">
+                            <h1 class="section-title">PYTHON SLEEP FUNCTION</h1>
+                            <div class="content-class">
+                                <p style="color: black"><code>sleep()</code> is defined in <code>time()</code> module of python. It Provides useful functions to handle time-related tasks. The <code>sleep()</code> suspends execution for the given number of seconds.For example you are waiting for a process to upload the file completely. </p>
+                            </div>
+                            <div class="row">
+                                <div class="col col-2"></div>
+                                <div class="coding-class col col-8">
+                                    <pre class="precode p-4"><span class="keyword">import</span> time<br><span class="inoutfunction">print</span>(<span class="printingwords">"Hi sfe"</span>)<br>time.sleep(<span class="numbers">5</span>)<br><span class="inoutfunction">print</span>(<span class="printingwords">"After 5 seconds sfe prints"</span>)</pre>
+                                </div>
+                                <div class="col col-2"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-2"></div>
+
+                                <div class="coding-class col col-8">
+                                    <pre class="precode p-4" >Hi sfe<br>After 5 seconds sfe prints</pre>
+                                </div>
+                                <div class="col col-2"></div>
+                            </div>
+                            <br>
+                            <div  class="content-class">
+                                <p style="color: black">Working of <code>sleep()</code> function ...<br>
+                                    To understand the working of <code>sleep()</code> function, we'll print the current execution time before using the <code>sleep()</code> function and execution time after using the <code>sleep()</code> function.
+                            </div>
+                            <div class="row">
+                                <div class="col col-2"></div>
+                                <div class="coding-class col col-8">
+                                    <pre class="precode p-4"><span class="keyword">import</span> time<br><span class="inoutfunction">print</span>(<span class="printingwords">"Before sleep(): execution time= "</span>,time.ctime())<br>time.sleep(<span class="numbers">5</span>)<br><span class="inoutfunction">print</span>(<span class="printingwords">"After sleep(): execution time= "</span>,time.ctime())</pre>
+                                </div>
+                                <div class="col col-2"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-2"></div>
+
+                                <div class="coding-class col col-8">
+                                    <pre class="precode p-4" >Before sleep(): execution time = Mon Jun 14 14:29:28 2021<br>After sleep() : execution time = Mon Jun 14 14:29:33 2021</pre>
+                                </div>
+                                <div class="col col-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="updates">
+                        <div class="update-information">
+                            <h1 class="section-title">UPDATES</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="content col-md-3 col-sm-12 col-xs-12">
+            <div class="section-block summary">
+                <h1 class="section-title">ABOUT</h1>
+                <div class="profile-contents">
+                    <h2 class="position">Solutions for everything</h2>
+                    <img src="../../assets/static/logo.png" class="profile-image img responsive" alt="John Doe">
+                    <!--social links-->
+                    <div class="row">
+                        <ul class="list-inline">
+
+                            <li><a href="https://www.facebook.com/profile.php?id=100069192901470"><i class="fa fa-facebook"></i></a></li>
+
+                            <li><a href="https://www.instagram.com/solutionsforeverything3/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCgTQBk8L_aQz6p9kj9rutqQ"><i class="fa fa-youtube-play"></i></a></li>
+
+
+                            <li><a href="https://github.com/solutionsforeverything"><i class="fa fa-git"></i></a></li>
+                        </ul>
+                    </div>
+                    <!--/social links-->
+                    <div class="btn btn-contact" id="go"><i class="fa fa-envelope"></i>CONTACT US</div>\
+                    <script>
+
+                        $('#go').click(function(event){
+                            window.location.href = 'https://mail.google.com/mail/?view=cm&fs=1&to='+"solutionsforeverything3@gmail.com";
+
+                        })
+
+                    </script>
+                </div>
+            </div>
+            <div class="section-block">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- horizontal -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-6732442063943834"
+                     data-ad-slot="1911180336"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true">
+                </ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <!--credits-->
+            <div class="section-block">
+                <h1 class="section-title">CREDITS</h1>
+                <!--credits block-->
+                <div class="credit-block sources">
+                    <ul class="list-unstyled">
+                        <li><a href="http://getbootstrap.com/"><i class="fa fa-external-link"></i>Bootstrap</a></li>
+                        <li><a href="http://fortawesome.github.io/Font-Awesome/"><i class="fa fa-external-link"></i>FontAwesome</a></li>
+                        <li><a href="https://www.google.com/fonts"><i class="fa fa-external-link"></i>Google Fonts</a></li>
+                    </ul>
+                </div>
+                <div class="credit-block license">
+                    <a href="https://www.instagram.com/solutionsforeverything3/" class="btn btn-follow"><i class="fa fa-instagram"></i>FOLLOW US</a>
+                </div>
+                <!--/credits block-->
+            </div>
+            <!--/credits-->
+        </div>
+
+        <!--/sidebar-->
+    </div>
+</div>
+
+
+
+
+<footer id="footer" >
+    <div class="footer-top" style="background-color: #f3f5fa ">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>SFE</h3>
+                    <p>
+                        chennai,<br>
+                        India, 600 044<br>
+                        <br><br>
+                        <strong>Email:</strong> solutionsforeverything3@gmail.com<br>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/{{email}}#hero">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/{{email}}#about">About us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/{{email}}#services">Services</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="https://portal.termshub.io/solutionsforeverything.com/">Terms of service & privacy policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/{{email}}/websites">Web Design</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/blogs/{{email}}/total">Blogs</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/projects/{{email}}/xyxz">Projects</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/{{email}}/courses">Courses</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Social Networks</h4>
+                    <p>For more details follow our social networks</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100069192901470" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="https://www.instagram.com/solutionsforeverything3/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCgTQBk8L_aQz6p9kj9rutqQ" class="google-plus"><i class="bx bxl-youtube"></i></a>
+                        <a href="https://github.com/solutionsforeverything" class="linkedin"><i class="bx bxl-github"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container g-5 footer-bottom clearfix">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Solutionsforeverything</span></strong>. All Rights Reserved
+        </div>
+        <div class="copyright" style="visibility: hidden">
+            <strong><span>Solutionsforev</span></strong>
+        </div>
+        <div class="copyright">
+            <strong> <a href="https://portal.termshub.io/solutionsforeverything.com/"> Terms & Privacy Policy</a></strong>
+        </div>
+        <div class="credits">
+            Designed by <a href="https://solutionsforeverything.com/">Solutionsforeverything</a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="../../assets/vendor/aos/aos.js"></script>
+<script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="../../assets/vendor/php-email-form/validate.js"></script>
+<script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../../assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+<!-- Template Main JS File -->
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

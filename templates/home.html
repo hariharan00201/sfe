@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name ="SFE" content="Solutionsforeverything">
+    <title>SFE-HOME</title>
+    <meta content="Home page of solutions for everything" name="description">
+    <meta content="" name="keywords">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="702082026296-rp6l3l85mv0nasifa2fs4hq512bgmlu5.apps.googleusercontent.com">
+    <link rel="icon" href="../assets/static/logo1.ico"  type="image/x-icon" size="16x16" >
+    <link href="logo.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+
+    <link href="../assets/vendor/aos/aos.css"  rel="stylesheet">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B41W65ZRYF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-B41W65ZRYF');
+    </script>
+    <!--    end of analytics-->
+
+
+</head>
+
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+
+    <div class="container d-flex align-items-center">
+        <h1 class="logo me-auto">
+            <pre><img src="../assets/static/logo.png"> <a href="/{{email}}">SFE</a></pre>
+        </h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="#about">About</a></li>
+                <li><a class="nav-link scrollto" href="#services">Services</a></li>
+
+                <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+
+                        <li class="dropdown"><a href=""><span>Blogs</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="blogs/{{email}}/pythonBlogs">Coding</a></li>
+                                <li><a href="blogs/{{email}}/cryptoBlogs">Crypto</a></li>
+                                <li><a href="blogs/{{email}}/generalBlogs">General</a></li>
+
+
+                            </ul>
+                        </li>
+
+                        <li class="dropdown"><a href=""><span>Projects</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="/projects/{{email}}/machine">Machine-learning projects</a></li>
+                                <li><a href="/projects/{{email}}/python">python projects</a></li>
+                                <li><a href="/projects/{{email}}/java">java projects</a></li>
+                                <li><a href="/projects/{{email}}/web">Web projects</a></li>
+                                <li><a href="/projects/{{email}}/cpp">c++ projects</a></li>
+
+                            </ul>
+                        <li><a href="{{email}}/courses">Courses</a></li>
+                        <li><a href="{{email}}/websites">Websites</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                <div id="no_log"><div><li><a class="getstarted scrollto" href="#login">Login</a></li></div></div>
+                <div id="yes_log"><div><li><a class="getstarted scrollto" href="profile/{{email}}">{{user}}</a> </li></div></div>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                <h1>Better Solutions For Everything</h1>
+                <h2>Our Moto Is To Give One Stop Solutions For Everything</h2>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                    <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                    <a href="#ourvideo" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                </div>
+            </div>
+            <div class="col col-lg-2"></div>
+            <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                <img src="../assets/static/banner_img.jpg" class="img-fluid animated" alt="">
+            </div>
+        </div>
+    </div>
+
+</section><!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= ads Section ======= -->
+    <section id="cliens" class="cliens section-bg">
+        <div class="container">
+            <div class="row" data-aos="zoom-in">
+                <!--          ads-->
+            </div>
+
+        </div>
+    </section><!-- End ads Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+
+            <div class="row content">
+                <div class="col-lg-6">
+                    <p>
+                        We are a group of young passionate developers , our main goal is to create a community where solutions for everything is available in a single place.
+                    </p>
+                    <ul>
+                        <li><i class="ri-check-double-line"></i><a href="/blogs/{{email}}/total">Blogs Service</a> - Where users can upload their articles which will be posted in our site.</li>
+                        <li><i class="ri-check-double-line"></i><a href="/projects/{{email}}/xyxz">Projects Service</a> - Where users can search for various projects.</li>
+                        <li><i class="ri-check-double-line"></i><a href="{{email}}/websites">Web-Site Developing</a> - Where we the developers are building web-sites based on the users requirements.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4 pt-4 pt-lg-0">
+                    <p>
+                    <div class="col-md-12">For more information follow us on social media</div>
+                    <ul class="list-inline-item">
+                        <div class="row">
+
+                            <div class="col-md-2"><li><a href="https://www.facebook.com/profile.php?id=100069192901470"><i class="fa fa-facebook fa-spin"></i></a></li></div>
+                            <div class="col-md-2"><li><a href="https://www.instagram.com/solutionsforeverything3/"><i class="fa fa-instagram fa-spin"></i></a></li></div>
+                            <div class="col-md-2"><li><a href="https://www.youtube.com/channel/UCgTQBk8L_aQz6p9kj9rutqQ"><i class="fa fa-youtube-play fa-spin"></i></a></li></div>
+                            <div class="col-md-2"><li><a href="https://github.com/solutionsforeverything"><i class="fa fa-git fa-spin"></i></a></li></div>
+                        </div>
+                    </ul>
+
+                    </p>
+                    <a href="#" class="btn-learn-more">Learn More</a>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Us Section -->
+
+
+
+
+    <section id="services" class="services section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Services</h2>
+                <p></p>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-news"></i></div>
+                        <h4><a href="/blogs/{{email}}/total">Blogs</a></h4>
+                        <p>The users can publish their articles here. </p>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-file"></i></div>
+                        <h4><a href="/projects/{{email}}/xyxz" id="project">Projects</a></h4>
+                        <p>We provide the good projects for students.</p>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-layout"></i></div>
+                        <h4><a href="/{{email}}/websites">Website Building</a></h4>
+                        <p>We build websites for business,industries and personal websites for users. </p>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bxs-layer-plus"></i></div>
+                        <h4><a href="/{{email}}/courses">Course Videos</a></h4>
+                        <p>There are many courses , which can be taken for free.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Services Section -->
+
+
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                    <img src="https://media.istockphoto.com/vectors/isometric-illustration-with-a-laptop-men-and-women-working-on-web-vector-id1096969570?k=6&m=1096969570&s=612x612&w=0&h=l4Q40Y8UF3keZJgJ_hNtUm9jMqTPQZlZOlS7Lq6N3RY=" class="img-fluid" alt="lohjkhjk">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+                    <h3>Our Websites Uses:</h3><br>
+                    <div class="skills-content">
+
+                        <div class="progress">
+                            <span class="skill">HTML <i class="val">100%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">BOOTSTRAP <i class="val">100%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">CSS <i class="val">90%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">JavaScript <i class="val">75%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">Python <i class="val">60%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Services Section ======= -->
+
+
+
+    <!-- ======= Login Section ======= -->
+    <section id="login" class="pricing section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Log-In/Sign-Up</h2>
+                <!--                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+            </div>
+
+            <div class="row">
+
+                <div id="login1" class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="box">
+
+                        <h4><sup></sup>Login</h4>
+                        <div class="card">
+                            <article class="card-body">
+
+                                <form action="login-validate" method="post">
+                                    <div class="form-group">
+                                        <label>Your email</label>
+                                        <input name="email" class="form-control" placeholder="Email" type="email">
+                                    </div> <!-- form-group// -->
+                                    <div class="form-group">
+                                        <label>Your password</label>
+                                        <a class="float-right" id="forg">Forgot?</a>
+
+                                        <input class="form-control" name = "pass" placeholder="******" type="password">
+                                    </div> <!-- form-group// -->
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label> <input type="checkbox"> Save password </label>
+                                        </div> <!-- checkbox .// -->
+                                    </div> <!-- form-group// -->
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block"> Login  </button>
+                                    </div> <!-- form-group// -->
+                                    <div id="aknowledgement" class="alert alert-danger">
+                                        You have entered a wrong password!!!
+                                    </div>
+                                    <!--                                    <div class="form-group">-->
+                                    <!--                                        <div class="g-signin2" id="my-signin" data-onsuccess="onSignIn"></div>-->
+                                    <!--                                    </div>-->
+                                </form>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+
+                <script>
+                    window.onload = function () {
+                        console.log('{{reset}}');
+                        var status = '{{status}}';
+                        var loggg = document.getElementById("no_log");
+                        var logg = document.getElementById("yes_log");
+                        var first_forgot = document.getElementById('forgot');
+                        var akn = document.getElementById("aknowledgement");
+                        var login_page_hide = document.getElementById("login");
+
+                        if(status == 'n')
+                        {
+
+                            akn.style.visibility = "visible";
+                            logg.style.display = "none";
+                            loggg.style.visibility = "visible";
+                            first_forgot.style.display = "none";
+                        }
+                        else if(status == 'y')
+                        {
+
+                            akn.style.visibility = "hidden";
+                            logg.style.visibility = "visible";
+                            loggg.style.display = "none";
+                            login_page_hide.style.display = "none";
+
+                        }
+                        else if( status == 'l')
+                        {
+
+                            akn.style.visibility = "hidden";
+                            logg.style.display = "none";
+                            loggg.style.visibility = "visible";
+                            first_forgot.style.display = "none";
+                        }
+
+                        if('{{reset}}' == "1")
+                            window.alert("The Reset password link has been sent to your mail!!!");
+                        if('{{reset}}' == "2")
+                            window.alert("Your password has been reset succesfully click ok to login!!!");
+                        if('{{reset}}' == "3")
+                            window.alert("You already have an account!!!");
+                        if('{{reset}}' == "4")
+                            window.alert("Please login or Signup to get projects!!!");
+                        if('{{reset}}' == "6")
+                            window.alert("Invalid username or password!!!");
+
+                    };
+
+                </script>
+
+                <div id = "forgot" class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="box">
+
+                        <h4>Forgot</h4>
+                        <div class="card">
+                            <article class="card-body">
+
+                                <form action="forgot_validation" method="post">
+                                    <div class="form-group">
+                                        <label>Enter email</label>
+                                        <input name="email" class="form-control" placeholder="Email" type="email">
+                                    </div> <!-- form-group// -->
+
+
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block"> submit </button>
+                                    </div>
+
+                                </form>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+
+                    var forgot_id = document.getElementById('forg');
+                    var login_validation_id = document.getElementById('login1');
+                    var forgot_validaton_id = document.getElementById('forgot');
+
+                    forgot_id.addEventListener('click' , function () {
+
+                        login_validation_id.style.display = "none";
+                        forgot_validaton_id.style.display = "initial";
+                    });
+
+                </script>
+
+
+
+                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="300">
+                    <div class="box">
+
+                        <h4>Sign Up</h4>
+                        <div class="card">
+                            <article class="card-body">
+
+                                <form action="signup_validation" method="post" onsubmit="return checkForm(this);">
+                                    <div class="form-group">
+                                        <label>Your Name</label>
+                                        <input name="uname" class="form-control" placeholder="Name" type="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Your email</label>
+                                        <input name="email" class="form-control" placeholder="Email" type="email"  required>
+                                    </div> <!-- form-group// -->
+                                    <div class="form-group">
+                                        <label>Your password</label>
+                                        <input class="form-control" name="pass" placeholder="******" type="password"  required>
+                                    </div> <!-- form-group// -->
+                                    <div class="form-group">
+                                        <label>Confirm password</label>
+                                        <input class="form-control" name="repass" placeholder="******" type="password"  required>
+                                    </div>
+                                    <!-- form-group// -->
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block"> sign up  </button>
+                                    </div>
+<!--                                    <div class="form-group">-->
+<!--                                        <div class="g-signin2" id="signin-button" data-onsuccess="onSignIn"></div>-->
+<!--                                    </div>-->
+                                    <!-- form-group// -->
+                                </form>
+
+
+                                <script>
+
+//                                    var namespace = '/googlesignin';
+//                                    var socket = io(namespace);
+//
+//                                    var profile;
+//                                    var name;
+//                                    var email;
+//                                    var photo;
+//
+//
+//                                    function onSignIn(googleUser) {
+//
+//                                            var profile = googleUser.getBasicProfile();
+//                                            var name = profile.getName();
+//                                            var email = profile.getEmail();
+//                                            var photo = profile.getImageUrl();
+//
+//
+//
+//                                            socket.emit('/google_signin', {email: email, uname: name, photo: photo});
+//
+//
+//                                    }
+
+
+                                </script>
+
+
+                                <script type="text/javascript">
+
+                                    function checkForm(form)
+                                    {
+                                        if(form.uname.value == "") {
+                                            alert("Error: Username cannot be blank!");
+                                            form.uname.focus();
+                                            return false;
+                                        }
+                                        if(form.email.value == "") {
+                                            alert("Error: Email cannot be blank!");
+                                            form.email.focus();
+                                            return false;
+                                        }
+                                        var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                                        if(!form.email.value.match (mailformat)) {
+                                            alert("Error: Enter valid Email!");
+                                            form.email.focus();
+                                            return false;
+                                        }
+                                        re = /^\w+$/;
+                                        if(!re.test(form.uname.value)) {
+                                            alert("Error: Username must contain only letters, numbers and underscores!");
+                                            form.uname.focus();
+                                            return false;
+                                        }
+
+                                        if(form.pass.value != "" && form.pass.value == form.repass.value) {
+                                            if(form.pass.value.length < 8) {
+                                                alert("Error: Password must contain at least eight characters!");
+                                                form.pass.focus();
+                                                return false;
+                                            }
+                                            if(form.pass.value == form.uname.value) {
+                                                alert("Error: Password must be different from Username!");
+                                                form.pass.focus();
+                                                return false;
+                                            }
+                                            re = /[0-9]/;
+                                            if(!re.test(form.pass.value)) {
+                                                alert("Error: password must contain at least one number (0-9)!");
+                                                form.pass.focus();
+                                                return false;
+                                            }
+                                            re = /[a-z]/;
+                                            if(!re.test(form.pass.value)) {
+                                                alert("Error: password must contain at least one lowercase letter (a-z)!");
+                                                form.pass.focus();
+                                                return false;
+                                            }
+                                            re = /[A-Z]/;
+                                            if(!re.test(form.pass.value)) {
+                                                alert("Error: password must contain at least one uppercase letter (A-Z)!");
+                                                form.pass.focus();
+                                                return false;
+                                            }
+                                        } else {
+                                            alert("Error: Please check that your password and confirm password not match!");
+                                            form.pass.focus();
+                                            return false;
+                                        }
+
+
+                                        return true;
+                                    }
+
+                                </script>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Pricing Section -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Contact</h2>
+                <p>If you have any queries or clarification feel free to message.</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-5 d-flex align-items-stretch">
+                    <div class="info">
+                        <div class="address">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>Location:</h4>
+                            <p>Chennai, India, 600 044</p>
+                        </div>
+
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>solutionsforeverything3@gmail.com</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                    <form action="contact" method="post" role="form" class="php-email-form">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Your Name</label>
+                                <input type="text" name="name" class="form-control" id="name" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="name">Your Email</label>
+                                <input type="email" class="form-control" name="email" id="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Subject</label>
+                            <input type="text" class="form-control" name="subject" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Message</label>
+                            <textarea class="form-control" name="message" rows="10" required></textarea>
+                        </div>
+                        <div class="my-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+                        <div class="text-center"><button type="submit">Send Message</button></div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer" >
+
+
+    <div class="footer-top" style="background-color: #f3f5fa ">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>SFE</h3>
+                    <p>
+                        chennai,<br>
+                        India, 600 044<br>
+                        <br><br>
+                        <strong>Email:</strong> solutionsforeverything3@gmail.com<br>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="https://portal.termshub.io/solutionsforeverything.com/">Terms of service & privacy policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/{{email}}/websites">Web Design</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/blogs/{{email}}/total">Blogs</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/projects/{{email}}/xyxz">Projects</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/{{email}}/courses">Courses</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Social Networks</h4>
+                    <p>For more details follow our social networks</p>
+                    <div class="social-links mt-3">
+                        <a href="https://twitter.com/solutionsforev3" class="twitter"><i class="bx bxl-twitter"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100069192901470" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="https://www.instagram.com/solutionsforeverything3/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCgTQBk8L_aQz6p9kj9rutqQ" class="google-plus"><i class="bx bxl-youtube"></i></a>
+                        <a href="https://github.com/solutionsforeverything" class="linkedin"><i class="bx bxl-github"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container g-5 footer-bottom clearfix">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Solutionsforeverything</span></strong>. All Rights Reserved
+        </div>
+        <div class="copyright" style="visibility: hidden">
+            <strong><span>Solutionsforev</span></strong>
+        </div>
+        <div class="copyright">
+            <strong> <a href="https://portal.termshub.io/solutionsforeverything.com/"> Terms & Privacy Policy</a></strong>
+        </div>
+        <div class="credits">
+            Designed by <a href="https://solutionsforeverything.com/">Solutionsforeverything</a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="../assets/vendor/aos/aos.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="../assets/vendor/php-email-form/validate.js"></script>
+<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+<!-- Template Main JS File -->
+<script src="../assets/js/main.js"></script>
+
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
+</body>
+
+</html>

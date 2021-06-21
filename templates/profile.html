@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name ="SFE" content="Solutionsforeverything">
+  <title>Profile-page</title>
+  <meta content="Home page of solutions for everything" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="icon" href="../assets/static/logo1.ico"  type="image/x-icon" size="16x16" >
+  <link href="logo.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+
+  <link href="../assets/vendor/aos/aos.css"  rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <style>
+    body{
+      margin-top:20px;
+      color: #1a202c;
+      text-align: left;
+      background-color: #e2e8f0;
+    }
+    input
+    {
+      width: 500px;
+      outline: none !important;
+      background: transparent;
+      border: none;
+    }
+    select
+    {
+      width: 500px;
+      outline: none !important;
+      background: transparent;
+      border: none;
+    }
+
+
+    .main-body {
+      padding: 15px;
+    }
+    .card {
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      border: 0 solid rgba(0,0,0,.125);
+      border-radius: .25rem;
+    }
+
+    .card-body {
+      flex: 1 1 auto;
+      min-height: 1px;
+      padding: 1rem;
+    }
+
+    .gutters-sm {
+      margin-right: -8px;
+      margin-left: -8px;
+    }
+
+    .gutters-sm>.col, .gutters-sm>[class*=col-] {
+      padding-right: 8px;
+      padding-left: 8px;
+    }
+    .mb-3, .my-3 {
+      margin-bottom: 1rem!important;
+    }
+
+    .bg-gray-300 {
+      background-color: #e2e8f0;
+    }
+    .h-100 {
+      height: 100%!important;
+    }
+    .shadow-none {
+      box-shadow: none!important;
+    }
+    .navbar .getstarted:hover {
+      color: #fff;
+      background: #e71212;
+    }
+    #file{
+      display: none;
+    }
+
+    #uploadBtn{
+      height: 40px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+      color: wheat;
+      line-height: 30px;
+      font-family: sans-serif;
+      font-size: 15px;
+      cursor: pointer;
+      display: none;
+    }
+    #photo{
+      height: 100%;
+      width: 100%;
+    }
+    .profile-pic-div{
+      height: 200px;
+      width: 200px;
+
+      top: 50%;
+      left: 50%;
+
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid grey;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top " style="background-color: #37517e">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo me-auto">
+      <pre><img src="../assets/static/logo.png"> <a href="/{{email}}">SFE</a></pre>
+    </h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" href="/{{email}}" id="gotohome">Home</a></li>
+        <li><a class="nav-link scrollto" href="/{{email}}#about">About</a></li>
+        <li><a class="nav-link scrollto" href="/{{email}}#services">Services</a></li>
+
+        <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li class="dropdown"><a href="blogs/total"><span>Blogs</span> <i class="bi bi-chevron-right"></i></a>
+              <ul>
+                <li><a href="/blogs/{{email}}/pythonBlogs">Coding</a></li>
+                <li><a href="/blogs/{{email}}/cryptoBlogs">Crypto</a></li>
+                <li><a href="/blogs/{{email}}/generalBlogs">General</a></li>
+
+
+              </ul>
+            </li>
+
+            <li class="dropdown"><a href="#"><span>Projects</span> <i class="bi bi-chevron-right"></i></a>
+              <ul>
+                <li><a href="/projects/{{email}}/machine">Machine-learning projects</a></li>
+                <li><a href="/projects/{{email}}/python">python projects</a></li>
+                <li><a href="/projects/{{email}}/java">java projects</a></li>
+                <li><a href="/projects/{{email}}/web">Web projects</a></li>
+                <li><a href="/projects/{{email}}/cpp">c++ projects</a></li>
+
+              </ul>
+            <li><a href="/{{email}}/courses">Courses</a></li>
+            <li><a href="/{{email}}/websites">Websites</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link scrollto" href="/{{email}}#contact">Contact</a></li>
+        <div ><div class=""><li><a class="getstarted scrollto" href="{{email}}/logout">Logout</a></li></div></div>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+  </div>
+</header>
+<div class="row">
+  <div class="col col-12" style="background-color: #37517e"><br><br><br></div>
+</div>
+<br><br>
+<div class="container">
+  <div class="main-body">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="main-breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/{{email}}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+      </ol>
+    </nav>
+
+    <!-- /Breadcrumb -->
+
+    <div class="row gutters-sm">
+      <div class="col-md-4 mb-3">
+        <form action="{{email}}/update_pic" enctype="multipart/form-data" method="post">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex flex-column align-items-center text-center ">
+
+                <div class="profile-pic-div">
+                  <img id="photo" src="" alt = "user image" >
+                  <input type="file" id="file" name="file" required>
+                  <label for="file" id="uploadBtn">Choose Photo</label>
+                </div>
+
+                <div class="mt-3">
+                  <h4>{{user}}</h4>
+
+                  <!--                                <button class="btn btn-outline-primary" id ="message">Message</button>-->
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex flex-column align-items-center text-center ">
+                <button  type="submit" class="btn btn-primary" id="savephoto">save photo</button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <script>
+
+          window.onload = function () {
+
+            var namespace = '/update';
+            var socket = io(namespace);
+
+            socket.emit('/check',{email : '{{email}}'});
+
+            socket.on('res_check' , function (msg) {
+              var status = msg.status;
+
+              if(status == "notok")
+              {
+                location.replace("/");
+              }
+
+            });
+
+            var photo = document.getElementById("photo");
+            var data = '{{photo}}';
+            console.log(data);
+            data = data.replace("b&#39;", "");
+            data = data.replace("&#39;", "");
+            photo.setAttribute('src', data);
+
+
+
+
+          }
+
+          const imgDiv = document.querySelector('.card-body');
+          const img = document.querySelector('#photo');
+          const file = document.querySelector('#file');
+          const uploadBtn = document.querySelector('#uploadBtn');
+
+          imgDiv.addEventListener('mouseenter', function(){
+            uploadBtn.style.display = "block";
+          });
+
+          imgDiv.addEventListener('mouseleave', function(){
+            uploadBtn.style.display = "none";
+          });
+
+
+          file.addEventListener('change', function(){
+
+            const choosedFile = this.files[0];
+            var img = document.getElementById("photo");
+
+            if (choosedFile) {
+
+              const reader = new FileReader();
+
+              reader.addEventListener('load', function(){
+                img.setAttribute('src', reader.result);
+              });
+
+              reader.readAsDataURL(choosedFile);
+            }
+          });
+        </script>
+
+        <div class="card mt-3">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+              <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Website</h6>
+              <span class="text-secondary">https://solutionsforeverything.com</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+              <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2 icon-inline"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</h6>
+              <span class="text-secondary">sfe</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+              <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter mr-2 icon-inline text-info"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>Twitter</h6>
+              <span class="text-secondary">sfe</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+              <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram mr-2 icon-inline text-danger"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>Instagram</h6>
+              <span class="text-secondary">sfe</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+              <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook mr-2 icon-inline text-primary"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</h6>
+              <span class="text-secondary">sfe</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Full Name</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                <input name="uname" value="{{user}}" disabled id="user_name_input" />
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Email</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                <input name="email" value="{{email}}" disabled id="user_mail_input"/>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">School/Collage</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                <input name = "college"  value="{{college}}" disabled id="user_collage_input"/>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Gender</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                <select  name = "gender"   disabled id="gender"/>
+                <option selected>{{gender}}</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Other</option>
+                </select>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-12">
+                <button class="btn btn-info" id ="edit" onclick="change()">Edit</button>
+                <button class="btn btn-info" id ="save_chages" style="visibility: hidden">Save changes</button>
+                <button class="btn btn-danger" id ="cancel" onclick="cancel()" style="visibility: hidden">Cancel</button>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!--        edit button changes script-->
+        <script>
+          function change(){
+            var butname = document.getElementById("edit");
+            var save_but = document.getElementById("save_chages");
+            var cancel_but = document.getElementById("cancel");
+            var name = document.getElementById("user_name_input");
+            var college = document.getElementById("user_collage_input");
+            var gender =document.getElementById("gender");
+            save_but.style.visibility = "visible";
+            butname.style.visibility = "hidden";
+            cancel_but.style.visibility = "visible";
+            name.disabled = false;
+            college.disabled = false;
+            gender.disabled = false;
+
+          }
+          function cancel(){
+            var butname = document.getElementById("edit");
+            var save_but = document.getElementById("save_chages");
+            var cancel_but = document.getElementById("cancel");
+            var name = document.getElementById("user_name_input");
+            var college = document.getElementById("user_collage_input");
+            var gender =document.getElementById("gender");
+            save_but.style.visibility = "hidden";
+            butname.style.visibility = "visible";
+            cancel_but.style.visibility = "hidden";
+            name.disabled = true;
+            college.disabled = true;
+            gender.disabled = true;
+
+          }
+
+          var save_changes = document.getElementById('save_chages');
+
+          save_changes.addEventListener('click' , function () {
+
+            var namespace = '/update';
+            var socket = io(namespace);
+            var name = document.getElementById("user_name_input");
+            var college = document.getElementById("user_collage_input");
+            var gender =document.getElementById("gender");
+            socket.emit('/update_user',{name : name.value , college :college.value , email : '{{email}}',gender : gender.value});
+            var butname = document.getElementById("edit");
+            var save_but = document.getElementById("save_chages");
+            var cancel_but = document.getElementById("cancel");
+            save_but.style.visibility = "hidden";
+            butname.style.visibility = "visible";
+            cancel_but.style.visibility = "hidden";
+            name.disabled =true;
+            college.disabled = true;
+            gender.disabled = true;
+
+
+          });
+
+        </script>
+
+
+        <div class="row gutters-sm">
+          <div class="col-sm-6 mb-3">
+            <div class="card h-100">
+              <div class="card-body" id="bmain">
+                <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Uploaded</i>Bloges <pre>   </pre>
+                  <button  class="btn btn-info" id ="topbupload" onclick=" bupload()">upload</button></h6>
+                This area contains your blogs.. No blogs updated.
+              </div>
+              <div  class="row p-1" id="buploadid" style="display: none">
+                <div class="col"><center><h3>Add Blog</h3></center><hr></div>
+                <form action="/profile/{{email}}/blogupload" enctype="multipart/form-data" method="post">
+                  <div class="col"><input name="bname" type="text" placeholder="Blog Name *" style="width: 300px;"><hr></div>
+                  <div class="col"><input name="bdesc" type="text" placeholder="Blog Description *" style="width: 300px;"><hr></div>
+                  <div class="col"><input name="bfile" type="file" placeholder="Upload Textfile *" style="width: 300px;"><hr></div>
+                  <div class="col text-center"><button class="btn btn-info align-content-center" id="subblogbt" onclick="loadbutton()" type="submit">upload</button> <button class="btn btn-primary"  id ="loadblogbt" type="button" disabled style="display: none;">
+                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                      Uploading...
+                    </button><hr>
+
+                  </div>
+                  <script>
+                    function loadbutton() {
+                      var subblogbt = document.getElementById("subblogbt");
+                      var loadbt = document.getElementById("loadblogbt");
+                      subblogbt.style.display = "none";
+                      loadbt.style.display = "block";
+                    }
+                  </script>
+
+                </form>
+                <div class="col text-center"> <button id = "bcancel" class="btn btn-danger " >cancel</button></div>
+
+                <br>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-3">
+            <div class="card h-100">
+              <div class="card-body" id="pmain" >
+                <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Uploaded</i>Project<pre>   </pre>
+                  <button  class="btn btn-info" id ="toppupload" onclick="pupload()">upload</button> </h6>
+                This area contains your projects.. No Projects updated.
+              </div>
+              <div  class="row p-1" id="puploadid" style="display: none;">
+                <div class="col"><center><h3>Add Project</h3></center><hr></div>
+                <form action="/profile/{{email}}/projupload" method="post">
+                  <div class="col"><input name="pname" type="text" placeholder="Project Name *" style="width: 300px;"><hr></div>
+                  <div class="col"><input name="pdesc" type="text" placeholder="Project Description *" style="width: 300px;"><hr></div>
+                  <div class="col"><input name="purl" type="text" placeholder="Project URL *" style="width: 300px;"><hr></div>
+                  <div class="col text-center"><button class="btn btn-info align-content-center" id ="projbt" onclick="projload()" type="submit">upload</button><button class="btn btn-primary"  id ="loadprojbt" type="button" disabled style="display: none;">
+                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                      Uploading...
+                    </button><hr>
+
+                  </div>
+                  <script>
+                    function projload() {
+                      var subblogbt = document.getElementById("projbt");
+                      var loadbt = document.getElementById("loadprojbt");
+                      subblogbt.style.display = "none";
+                      loadbt.style.display = "block";
+                    }
+                  </script>
+
+
+                </form>
+                <div class="col text-center"> <button id = "pcancel" class="btn btn-danger " >cancel</button></div>
+
+                <br>
+              </div>
+            </div>
+            <script>
+              var topshow = document.getElementById("pmain");
+              var botshow = document.getElementById('puploadid');
+              var topshow1 = document.getElementById("bmain");
+              var botshow1 = document.getElementById("buploadid");
+              var pcancel = document.getElementById("pcancel");
+
+              var bcancel = document.getElementById("bcancel");
+              pcancel.addEventListener("click" , function () {
+
+                topshow.style.display = "block";
+                botshow.style.display = "none";
+
+              });
+
+              bcancel.addEventListener("click" , function () {
+
+                topshow1.style.display = "block";
+                botshow1.style.display = "none";
+
+              });
+
+
+
+              function pupload(){
+
+
+                topshow.style.display = "none";
+                botshow.style.display = "block" ;
+
+
+              }
+              function bupload(){
+
+
+                topshow1.style.display = "none";
+                botshow1.style.display = "block" ;
+
+
+              }
+
+            </script>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer id="footer" >
+  <div class="footer-top" style="background-color: #f3f5fa ">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h3>SFE</h3>
+          <p>
+            chennai,<br>
+            India, 600 044<br>
+            <br><br>
+            <strong>Email:</strong> solutionsforeverything3@gmail.com<br>
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="/{{email}}">Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/{{email}}#about">About us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/{{email}}#services">Services</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://portal.termshub.io/solutionsforeverything.com/">Terms of service</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://portal.termshub.io/solutionsforeverything.com/">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="/{{email}}/websites">Web Design</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/blogs/{{email}}/total">Blogs</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/projects/{{email}}/xyxz">Projects</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/{{email}}/courses">Courses</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Social Networks</h4>
+          <p>For more details follow our social networks</p>
+          <div class="social-links mt-3">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100069192901470" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.instagram.com/solutionsforeverything3/" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCgTQBk8L_aQz6p9kj9rutqQ" class="google-plus"><i class="bx bxl-youtube"></i></a>
+            <a href="https://github.com/solutionsforeverything" class="linkedin"><i class="bx bxl-github"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom clearfix">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Solutionsforeverything</span></strong>. All Rights Reserved
+    </div>
+    <div class="copyright" style="visibility: hidden">
+      <strong><span>Solutionsforev</span></strong>
+    </div>
+    <div class="copyright">
+      <strong> <a href="https://portal.termshub.io/solutionsforeverything.com/"> Terms & Privacy Policy</a></strong>
+    </div>
+    <div class="credits">
+      Designed by <a href="https://solutionsforeverything.com/">Solutionsforeverything</a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="../assets/vendor/aos/aos.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="../assets/vendor/php-email-form/validate.js"></script>
+<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+<!-- Template Main JS File -->
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
